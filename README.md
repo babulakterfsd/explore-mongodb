@@ -30,3 +30,7 @@
 19. db.users.find({name: {$regex: /da/i}}) -> evabe regex use korte hoy. {name: { $regex: /^.{4}$/ } } eta dile jeshob doc e name property exact 5 character e,exactly oi doc gulai return korbe
 
 20.db.expense.find({$expr: {$gt: ["$budget", "$spent"]}}) -> eta hocche expression operator. ekhane jeshob doc e budget spent er cheye boro, segula return korbe
+
+21. db.users.updateOne({\_id: Ob......}, {$set: {name: "......."}}) -> update a document
+22. db.users.updateMany({age: {$lt: 18}}, {$set: {age: 18}}) -> 18 bochorer nicher shobar age 18 baniye dibe
+23. db.users.updateMany({age: {$lt: 18}}, {$inc: {age: 2}}) -> 18 bochorer nicher shobar age er sathe 2 kore jog kore dibe
