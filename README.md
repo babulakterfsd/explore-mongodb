@@ -15,3 +15,16 @@
 9. db.users.find({age: {$gt: 23}}) -> 23 bochorer boro shob user ke dekhabe
 
 10. db.users.find().sort({age: -1}) -> age gula upor theke sort hoye dekhabe
+11. db.users.find().sort({age: {$ne: 23}}) -> age 23 noy, emon shob user dibe
+12. db.users.find({name: {$in: ['awal', 'babul']}}) -> awal ba babul, kono document er name er value er jekono ekta holei seta ba segula return korbe
+13. db.users.find({name: {$nin: ['awal', 'babul']}}) -> awal ba babul, kono document er name er value eigula baade jegular, segula return korbe
+
+14. db.users.find({$and: [{name: 'David'}, {age: 25}]}) -> logical and operator, ekhane sudhumatro jader naam David ebong ekoi sathe age 25, sudhu tader e return korbe. but kahini ta hocche, ekhane and operator use na kore direct db.users.find({name: 'David', age: 25}) dileo same kahini tai hoto.
+
+15. db.users.find({$and: [{name: 'David'}, {age: 25}]}) -> And operator er cheye ekhetre beshi karjokori or operator. jekono keta sotto holei return korbe.
+
+16. db.users.find({age: {$not: {$gt: 25} }}) -> not operator. ekhane sorboccho 25 bochor boyoshi user der return korbe sudhu.
+
+17. db.users.find({$and: [{name: 'Emily'}, {age: {$gt: 25, $lt: 30}}]}) -> logical ar comparison operator combined kore use kora hyeche.
+
+18. db.users.find({$and: [{age: {$exists: true}}) -> jeshob document e sudhu age ache, segulai return korbe
