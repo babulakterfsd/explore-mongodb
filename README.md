@@ -2,6 +2,8 @@
 
 #### mongo: This command opens the MongoDB shell.
 
+(testdb naame ekta database rakha ache mongo te)
+
 1. use db -> change database
 2. show collections -> will show collections in current db
 3. db.users.find() -> will show all the documents in the collection
@@ -22,9 +24,9 @@
 14. db.users.find({$and: [{name: 'David'}, {age: 25}]}) -> logical and operator, ekhane sudhumatro jader naam David ebong ekoi sathe age 25, sudhu tader e return korbe. but kahini ta hocche, ekhane and operator use na kore direct db.users.find({name: 'David', age: 25}) dileo same kahini tai hoto.
 
 15. db.users.find({$and: [{name: 'David'}, {age: 25}]}) -> And operator er cheye ekhetre beshi karjokori or operator. jekono keta sotto holei return korbe.
-
 16. db.users.find({age: {$not: {$gt: 25} }}) -> not operator. ekhane sorboccho 25 bochor boyoshi user der return korbe sudhu.
-
 17. db.users.find({$and: [{name: 'Emily'}, {age: {$gt: 25, $lt: 30}}]}) -> logical ar comparison operator combined kore use kora hyeche.
-
 18. db.users.find({$and: [{age: {$exists: true}}) -> jeshob document e sudhu age ache, segulai return korbe
+19. db.users.find({name: {$regex: /da/i}}) -> evabe regex use korte hoy. {name: { $regex: /^.{4}$/ } } eta dile jeshob doc e name property exact 5 character e,exactly oi doc gulai return korbe
+
+20.db.expense.find({$expr: {$gt: ["$budget", "$spent"]}}) -> eta hocche expression operator. ekhane jeshob doc e budget spent er cheye boro, segula return korbe
