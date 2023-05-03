@@ -2,7 +2,7 @@
 
 #### mongo: This command opens the MongoDB shell.
 
-(dhorlam, mongodb te testdb naame ekta database ache jar abar users ar expense naame 2 ta collection ache)
+(testdb naame ekta database rakha ache mongo te)
 
 1. use db -> change database
 2. show collections -> will show collections in current db
