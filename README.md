@@ -4,7 +4,7 @@
 
 (testdb naame ekta database rakha ache mongo te)
 
-1. use db -> change database
+1. use db -> change database.
 2. show collections -> will show collections in current db
 3. db.users.find() -> will show all the documents in the collection
 4. db.users.find().count() -> how much data are there in the collection
